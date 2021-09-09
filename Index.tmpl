@@ -1,0 +1,30 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> List of all weather data </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Weather ID</td>
+        <td>Weather Date</td>
+        <td>Location</td>
+        <td>Temperature</td>
+        
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .WeatherID }}</td>
+        <td>{{ .Location }} </td> 
+        <td> {{ .WeatherDate }} </td>
+        
+        <td>{{ .Temp }} </td> 
+        
+        
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}

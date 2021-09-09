@@ -1,0 +1,24 @@
+{{ define "Country" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> List of all Countries </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Country ID</td>
+        <td>Country Name</td>
+        
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .CountryId }}</td>
+        <td>{{ .CountryName }} </td> 
+                 
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}

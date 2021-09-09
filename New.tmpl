@@ -1,0 +1,14 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Name and City</h2>  
+    <form method="POST" action="insert">
+      <label> WeatherID </label><input type="text" name="txtWeatherID" /><br />
+      <label> WeatherDate </label><input type="text" name="txtwDate" /><br />
+      <label> Location </label><input type="text" name="txtLocation" /><br />
+      <label> Temperature </label><input type="text" name="txtTemp" /><br />
+      
+      <input type="submit" value="Save Weather Data" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

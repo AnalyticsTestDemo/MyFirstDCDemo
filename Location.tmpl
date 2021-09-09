@@ -1,0 +1,30 @@
+{{ define "Location" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> List of all weather locations </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Location Name</td>
+        <td>State</td>
+
+        <td>Latitude</td>
+        </td>Longitude</td>
+        
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .LocationName }} </td> 
+        <td>{{ .State }}</td>
+
+        <td>{{ .Latitude}}</td>
+        </td>{{ .Longitude}}</td>
+                 
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
