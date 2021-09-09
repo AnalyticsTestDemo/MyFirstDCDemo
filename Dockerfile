@@ -3,7 +3,7 @@
 FROM golang:1.12.0-alpine3.9
 ## adding git to the Alpine variant can currently be accomplished with a very trivial Dockerfile similar to the following:
 
-#RUN apk add --no-cache git
+ RUN apk add --no-cache git
 
 # create a working directory
 WORKDIR /app
